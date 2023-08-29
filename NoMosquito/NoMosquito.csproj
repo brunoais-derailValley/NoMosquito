@@ -1,9 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
+		<!--Expecting to have a symlink to Derail Valley at the same dir as NoMosquito.sln-->
 		<ReferencePath>
 			../Derail Valley/DerailValley_Data/Managed
 		</ReferencePath>
-		<AssemblySearchPaths>$(AssemblySearchPaths);$(ReferencePath);</AssemblySearchPaths>
+		<ReferencePathUMM>
+			../Derail Valley/DerailValley_Data/Managed/UnityModManager
+		</ReferencePathUMM>
+		<AssemblySearchPaths>$(AssemblySearchPaths);$(ReferencePath);$(ReferencePathUMM);</AssemblySearchPaths>
 		<AssemblyName>NoMosquito</AssemblyName>
 		<TargetFramework>net48</TargetFramework>
 		<LangVersion>latest</LangVersion>
@@ -25,9 +29,8 @@
 
 	<!-- Mod Loader -->
 	<ItemGroup>
-		<PackageReference Include="UnityModManager" Version="0.27.2"/>
-		<!--<PackageReference Include="0Harmony" Version="2.2.2"/>-->
-		<PackageReference Include="Lib.Harmony" Version="2.2.2"/>
+		<Reference Include="UnityModManager" Version="0.27.2"/>
+		<Reference Include="0Harmony" Version="2.2.2"/>
 	</ItemGroup>
 
 	<!-- Null Checking -->
