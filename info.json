@@ -1,0 +1,9 @@
+{
+	"Id": "NoMosquito",
+	"Version": "1.0.0",
+	"DisplayName": "NoMosquito",
+	"Author": "brunoais",
+	"EntryMethod": "NoMosquito.Main.Load",
+	"ManagerVersion": "0.27.3",
+	"Repository": "https://raw.githubusercontent.com/brunoais-derailValley/NoMosquito/master/repository.json"
+}
