@@ -43,6 +43,14 @@
 		<!-- Copy to build folder -->
 		<Copy SourceFiles="$(TargetPath)" DestinationFolder="../build/"/>
 
+		<!-- Reload updated mod -->
+		<Exec Condition="'$(ConfigurationName)' == 'Reload' And '$(OS)' == 'Windows_NT'" Command="py -3 ../reload.py"/>
+		<Exec Condition="'$(ConfigurationName)' == 'Reload' And '$(OS)' != 'Windows_NT'" Command="python3 ../reload.py"/>
+
+		<!-- Send debug build -->
+		<Exec Condition="'$(ConfigurationName)' == 'Debug' And '$(OS)' == 'Windows_NT'" Command="py -3 ../install.py"/>
+		<Exec Condition="'$(ConfigurationName)' == 'Debug' And '$(OS)' != 'Windows_NT'" Command="../install.sh"/>
+
 		<!-- Package after Release build -->
 		<Exec Condition="'$(ConfigurationName)' == 'Release' And '$(OS)' == 'Windows_NT'" Command="powershell -executionpolicy bypass -Command &quot;(../package.ps1)&quot;"/>
 		<Exec Condition="'$(ConfigurationName)' == 'Release' And '$(OS)' != 'Windows_NT'" Command="pwsh -Command &quot;(../package.ps1)&quot;"/>
