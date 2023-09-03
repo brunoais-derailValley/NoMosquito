@@ -5,5 +5,6 @@
 	"Author": "brunoais",
 	"EntryMethod": "NoMosquito.Main.Load",
 	"ManagerVersion": "0.27.3",
-	"Repository": "https://raw.githubusercontent.com/brunoais-derailValley/NoMosquito/master/repository.json"
+	"Repository": "https://raw.githubusercontent.com/brunoais-derailValley/NoMosquito/master/repository.json",
+	"HomePage": "https://www.nexusmods.com/derailvalley/mods/792"
 }
